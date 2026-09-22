@@ -30,7 +30,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Шапка навігації */
+/* Navigation header */
 .navbar {
     background-color: var(--bg-card) !important;
     border-bottom: 1px solid var(--border-color) !important;
@@ -45,13 +45,13 @@ body {
         color: var(--accent-color) !important;
     }
 
-/* Головні заголовки */
+/* Main headings */
 h1, h2, h3, h4, h5, h6 {
     color: #ffffff !important;
     font-weight: 700;
 }
 
-/* Форми та поля вводу */
+/* Forms and input fields */
 label,
 .control-label,
 .form-label {
@@ -79,7 +79,7 @@ label,
         color: var(--text-secondary) !important;
     }
 
-/* Кнопки */
+/* Buttons */
 .btn-primary {
     background-color: var(--accent-color) !important;
     border-color: var(--accent-color) !important;
@@ -95,7 +95,7 @@ label,
         border-color: var(--accent-hover) !important;
     }
 
-/* Таблиця */
+/* Table */
 .table {
     background-color: var(--bg-card) !important;
     color: var(--text-primary) !important;
@@ -132,7 +132,7 @@ label,
         background-color: var(--bg-card-hover) !important;
     }
 
-    /* Посилання дій */
+    /* Action links */
     .table a {
         color: #60a5fa !important;
         text-decoration: none;
@@ -147,7 +147,7 @@ label,
             color: var(--danger-color) !important;
         }
 
-/* Підвал (виправлено центрування та зсув) */
+/* Footer (fixed centering and offset) */
 .footer {
     position: absolute;
     bottom: 0;
@@ -161,7 +161,7 @@ label,
     color: var(--text-secondary) !important;
 }
 
-/* Виправлення накладання тексту у Floating Labels */
+/* Fix overlapping text in Floating Labels */
 .form-floating {
     position: relative;
 }
@@ -192,7 +192,7 @@ label,
         line-height: 1.25;
     }
 
-/* Фікс стандартного dl / dt / dd для сторінок Details та Delete */
+/* Fix standard dl / dt / dd for Details and Delete pages */
 dl.row dt {
     width: 100% !important;
     color: var(--text-secondary, #9ca3af) !important;
