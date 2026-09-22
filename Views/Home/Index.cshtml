@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="py-5 text-center">
+    <div class="mb-3">
+        <span class="badge rounded-pill bg-primary px-3 py-2 text-uppercase" style="letter-spacing: 0.08em; font-size: 0.75rem;">Community Humor</span>
+    </div>
+    <h1 class="display-3 fw-bold mb-3 text-light">Jokes & Riddles Hub</h1>
+    <p class="lead text-secondary mx-auto mb-4" style="max-width: 650px;">
+        A simple web application to read, share, and discover clever jokes and riddles. Browse through submissions or join our authors to post your own!
+    </p>
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a asp-controller="Jokes" asp-action="Index" class="btn btn-primary btn-lg px-4">
+            Explore All Jokes
+        </a>
+        <a asp-controller="Jokes" asp-action="ShowSearchForm" class="btn btn-outline-secondary btn-lg px-4 text-light">
+            Search Jokes
+        </a>
+    </div>
+</div>
+
+<div class="row g-4 mt-2">
+    <div class="col-md-4">
+        <div class="card h-100 p-4" style="background-color: var(--bg-card, #1f2937); border: 1px solid var(--border-color, #374151); border-radius: 12px;">
+            <div class="card-body p-0">
+                <div class="fs-2 mb-2 text-primary">😄</div>
+                <h5 class="card-title text-light fw-bold">Spoiler-Free Browsing</h5>
+                <p class="card-text text-secondary">
+                    Punchlines and riddle answers stay hidden until you click Details. No early reveals while scrolling.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card h-100 p-4" style="background-color: var(--bg-card, #1f2937); border: 1px solid var(--border-color, #374151); border-radius: 12px;">
+            <div class="card-body p-0">
+                <div class="fs-2 mb-2 text-primary">✍️</div>
+                <h5 class="card-title text-light fw-bold">Share Your Humor</h5>
+                <p class="card-text text-secondary">
+                    Sign in to post new jokes. You maintain full control to edit or delete your own contributions anytime.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card h-100 p-4" style="background-color: var(--bg-card, #1f2937); border: 1px solid var(--border-color, #374151); border-radius: 12px;">
+            <div class="card-body p-0">
+                <div class="fs-2 mb-2 text-primary">🔍</div>
+                <h5 class="card-title text-light fw-bold">Instant Search</h5>
+                <p class="card-text text-secondary">
+                    Look up specific topics or punchlines effortlessly using our built-in keyword query tool.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

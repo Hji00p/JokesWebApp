@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+
+<div class="py-4">
+    <h1 class="mb-4 text-light">@ViewData["Title"]</h1>
+
+    <div class="card p-4" style="max-width: 700px; background-color: var(--bg-card, #1f2937); border: 1px solid var(--border-color, #374151); border-radius: 12px;">
+        <div class="card-body p-0">
+            <h5 class="text-light fw-bold mb-3">Local Storage & Privacy</h5>
+            <p class="text-secondary mb-3">
+                This application runs entirely on your local development environment. No personal data, credentials, or submitted jokes are transmitted to third-party servers or external tracking services.
+            </p>
+            
+            <div class="border-top pt-3 mt-3" style="border-color: var(--border-color, #374151) !important;">
+                <ul class="text-secondary mb-0 ps-3">
+                    <li class="mb-2">User accounts and passwords are stored in your local database using ASP.NET Core Identity encryption.</li>
+                    <li class="mb-2">Cookies are strictly used to maintain your active authentication session.</li>
+                    <li>All joke entries and searches stay on your local machine.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

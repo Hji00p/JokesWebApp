@@ -1,0 +1,213 @@
+:root {
+    --bg-body: #111827;
+    --bg-card: #1f2937;
+    --bg-card-hover: #374151;
+    --text-primary: #f9fafb;
+    --text-secondary: #9ca3af;
+    --accent-color: #3b82f6;
+    --accent-hover: #2563eb;
+    --border-color: #374151;
+    --danger-color: #ef4444;
+}
+
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+body {
+    background-color: var(--bg-body) !important;
+    color: var(--text-primary) !important;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    margin-bottom: 80px;
+    overflow-x: hidden;
+}
+
+/* Шапка навігації */
+.navbar {
+    background-color: var(--bg-card) !important;
+    border-bottom: 1px solid var(--border-color) !important;
+}
+
+.navbar-brand,
+.nav-link {
+    color: var(--text-primary) !important;
+}
+
+    .nav-link:hover {
+        color: var(--accent-color) !important;
+    }
+
+/* Головні заголовки */
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff !important;
+    font-weight: 700;
+}
+
+/* Форми та поля вводу */
+label,
+.control-label,
+.form-label {
+    color: #e5e7eb !important;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+}
+
+.form-control {
+    background-color: var(--bg-card) !important;
+    color: #ffffff !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 8px;
+    padding: 0.6rem 0.85rem;
+}
+
+    .form-control:focus {
+        background-color: var(--bg-card) !important;
+        color: #ffffff !important;
+        border-color: var(--accent-color) !important;
+        box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.25) !important;
+    }
+
+    .form-control::placeholder {
+        color: var(--text-secondary) !important;
+    }
+
+/* Кнопки */
+.btn-primary {
+    background-color: var(--accent-color) !important;
+    border-color: var(--accent-color) !important;
+    color: #ffffff !important;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 0.5rem 1.25rem;
+    transition: background-color 0.15s ease;
+}
+
+    .btn-primary:hover {
+        background-color: var(--accent-hover) !important;
+        border-color: var(--accent-hover) !important;
+    }
+
+/* Таблиця */
+.table {
+    background-color: var(--bg-card) !important;
+    color: var(--text-primary) !important;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--border-color) !important;
+    margin-top: 1.5rem;
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: auto;
+    word-break: break-word;
+}
+
+    .table th {
+        background-color: #0f172a !important;
+        color: #d1d5db !important;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 0.05em;
+        padding: 1rem;
+        border-bottom: 1px solid var(--border-color) !important;
+    }
+
+    .table td {
+        background-color: transparent !important;
+        color: #f3f4f6 !important;
+        padding: 1rem;
+        vertical-align: middle;
+        border-bottom: 1px solid var(--border-color) !important;
+    }
+
+    .table tbody tr:hover td {
+        background-color: var(--bg-card-hover) !important;
+    }
+
+    /* Посилання дій */
+    .table a {
+        color: #60a5fa !important;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+        .table a:hover {
+            text-decoration: underline;
+        }
+
+        .table a[href*="Delete"] {
+            color: var(--danger-color) !important;
+        }
+
+/* Підвал (виправлено центрування та зсув) */
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    box-sizing: border-box;
+    line-height: 60px;
+    background-color: var(--bg-card) !important;
+    border-top: 1px solid var(--border-color) !important;
+    color: var(--text-secondary) !important;
+}
+
+/* Виправлення накладання тексту у Floating Labels */
+.form-floating {
+    position: relative;
+}
+
+    .form-floating > .form-control:not(:focus):placeholder-shown::placeholder {
+        color: transparent !important;
+    }
+
+    .form-floating > label {
+        color: var(--text-secondary, #9ca3af) !important;
+        background-color: transparent !important;
+        padding: 1rem 0.75rem !important;
+        pointer-events: none;
+        transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
+    }
+
+    .form-floating > .form-control:focus ~ label,
+    .form-floating > .form-control:not(:placeholder-shown) ~ label {
+        color: var(--accent-color, #60a5fa) !important;
+        opacity: 0.85;
+        transform: scale(0.85) translateY(-0.75rem) translateX(0.15rem);
+    }
+
+    .form-floating > .form-control {
+        padding-top: 1.625rem !important;
+        padding-bottom: 0.625rem !important;
+        height: calc(3.5rem + 2px) !important;
+        line-height: 1.25;
+    }
+
+/* Фікс стандартного dl / dt / dd для сторінок Details та Delete */
+dl.row dt {
+    width: 100% !important;
+    color: var(--text-secondary, #9ca3af) !important;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+dl.row dd {
+    width: 100% !important;
+    margin-left: 0 !important;
+    color: var(--text-primary, #f9fafb) !important;
+    font-size: 1.15rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
